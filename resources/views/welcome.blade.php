@@ -45,22 +45,25 @@
         <script src="{{ asset('js/navbar.js') }}"></script>
     </div>
 
-    <main class="flex">
-        <div class="flex flex-col items-center  w-1/2">
-            <div class="space-y-5">
-                <p class="text-third font-semibold">SIGN IN TO START GAZING!</p>
-                <p class="text-fourth text-4xl">Keep track of all the items you want in just a few clicks</p>
-                <p class="text-fourth">All items from your wishlist in one place - from Amazon and BestBuy to Target and Walmart</p>
+    <main class="lg:px-20 px-6">
+        <div class="flex-col md:flex-row md:flex py-12 space-y-6 md:space-y-0">
+            <!-- Left side -->
+            <div class="flex flex-col items-center w-full md:w-1/2 justify-center">
+                <div class="space-y-8">
+                    <p class="text-third font-semibold">SIGN IN TO START GAZING!</p>
+                    <p class="text-fourth text-6xl">Keep track of all the items you want in just a few clicks</p>
+                    <p class="text-fourth">All items from your wishlist in one place - from Amazon and BestBuy to Target and Walmart</p>
 
-                <div class="flex space-x-2">
-                    <input type="text" placeholder="Your email address">
-                    <button class="hidden md:block rounded-md border-2 border-third px-3.5 py-1.5 bg-third text-white">Get Started</button>
+                    <div class="flex space-x-2">
+                        <input class="md:flex-grow-0 md:flex-1" type="text" placeholder="Your email address">
+                        <button class="md:block rounded-md border-2 border-third px-3.5 py-1.5 bg-third text-white">Get Started</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="w-1/2">
-            <img src="" alt="Cool image">
+            <!-- Right side -->
+            <div class="md:w-1/2">
+                <img class="object-cover w-full h-96" src="{{ asset('images/landing2.png') }}" alt="Cool image">
+            </div>
         </div>
     </main>
 </body>
