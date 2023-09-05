@@ -1,50 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gaze</title>
-    @vite('resources/css/app.css')
-</head>
-<body class="min-w-[320px] min-h-screen pt-6 px-12 md:pt-8 md:px-16">
-    <!-- wrapper div  -->
-    <div class="relative">
-        <nav class="flex justify-between items-center whitespace-nowrap">
-            <!-- left side of navbar -->
-            <div class="flex items-center">
-                <x-application-logo class="h-16 w-16" />
-                <div class="hidden md:block border-l-2 border-first my-4 mx-4">&nbsp;</div>
-
-                <div class="hidden space-x-2 text-fourth md:block ">
-                    <a href="/dashboard">Dashboard</a>
-                    <a href="">Services</a>
-                    <a href="">About</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-            <!-- right of navbar -->
-            <div class="space-x-6 items-center flex text-fourth">
-                <img id="menuButton" class="md:hidden" src="{{ asset('images/svg/menu.svg') }}" alt="">
-                @auth
-                    <button class="rounded-xl border px-2.5 py-1.5 border-sky-400 hover:text-white hover:bg-sky-400 hover:duration-300">Logout</button>
-                @else
-                    <a href="/login" class="hidden md:block text-third">Login</a>
-                    <a href="/register" class="hidden md:block rounded-xl border-2 px-2.5 py-1.5 border-first text-third hover:border-white hover:text-white hover:bg-third hover:duration-300">Sign Up</a>
-                @endauth
-            </div>
-        </nav>
-        <!-- mobile navbar -->
-        <div id="mobile-navbar" class="hidden text-gray-700 w-full absolute md:hidden flex flex-col space-y-4 mt-4 items-center">
-            <a href="">Dashboard</a>
-            <a href="">Services</a>
-            <a href="">About</a>
-            <a href="">Contact Us</a>
-        </div>
-        <script src="{{ asset('js/navbar.js') }}"></script>
-    </div>
-
+<x-main-layout>
     <main>
         <!-- Display --->
         <div class="lg:px-20 px-6 flex-col md:flex-row md:flex py-12 space-y-6 md:space-y-0 bg-gradient-to-b from-white via-gray-50 to-purple-50">
@@ -74,7 +28,7 @@
             </div>
             <div class="p-4 space-y-1.5 flex flex-col justify-center items-center">
                 <div class="space-x-2 flex items-center">
-                    <p class="text-6xl md:text-4xl text-fourth font-semibold">50+</p>
+                    <p id="count" class="text-6xl md:text-4xl text-fourth font-semibold">0</p>
                     <span class="bg-third p-1.5 rounded-xl text-white">counting...</span>
                 </div>
                 <p class="text-xl md:text-base text-fourth font-light">Websites supported</p>
@@ -85,5 +39,6 @@
             </div>
         </div>
     </main>
-</body>
-</html>
+    <script src="{{ asset('js/welcome.js') }}"></script>
+</x-main-layout>
+
