@@ -22,7 +22,7 @@ class ItemController extends Controller
             'url' => $data['url'],
             'store_id' => $data['store'],
             'user_id' => request()->user()->id,
-            'status' => 'Pending'
+            'status' => Item::setStatus($data['url'])
         ]);
 
         return back();

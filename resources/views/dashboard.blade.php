@@ -46,7 +46,7 @@
                             <td>{{ $item->id }}</td>
                             <td class="max-w-2xl overflow-hidden">{{ $item->url }}</td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->getStatus() }}</td>
+                            <td>{{ $item->updateStatus() }}</td>
                         </tr>
                     @endforeach
                 @endif
