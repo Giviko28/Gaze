@@ -1,13 +1,14 @@
 <x-main-layout>
+    <link rel="stylesheet" href="{{ asset('css/animations.css') }}">
     <main>
         <!-- Display --->
         <div class="lg:px-20 px-6 flex-col md:flex-row md:flex py-12 space-y-6 md:space-y-0 bg-gradient-to-b from-white via-gray-50 to-purple-50">
             <!-- Left side -->
             <div class="flex flex-col items-center w-full md:w-1/2 justify-center">
                 <div class="space-y-8">
-                    <p class="text-third font-semibold">SIGN IN TO START GAZING!</p>
-                    <p class="text-fourth text-6xl">Keep track of all the items you want in just a few clicks</p>
-                    <p class="text-fourth">All items from your wishlist in one place - from Amazon and BestBuy to Target and Walmart</p>
+                    <p class="text-third font-semibold custom-hidden">SIGN IN TO START GAZING!</p>
+                    <p class="text-fourth text-6xl custom-hidden">Keep track of all the items you want in just a few clicks</p>
+                    <p class="text-fourth custom-hidden">All items from your wishlist in one place - from Amazon and BestBuy to Target and Walmart</p>
 
                     <div class="flex space-x-2">
                         <input class="md:flex-grow-0 md:flex-1" type="text" placeholder="Your email address">
@@ -16,7 +17,8 @@
                 </div>
             </div>
             <!-- Right side -->
-            <div class="md:w-1/2">
+{{--            <div class="animate-intro md:w-1/2">--}}
+            <div class="custom-hidden-right md:w-1/2">
                 <img class="object-cover w-full h-96" src="{{ asset('images/landing3.png') }}" alt="Cool image">
             </div>
         </div>

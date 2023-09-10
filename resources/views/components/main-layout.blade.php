@@ -8,7 +8,7 @@
     <title>Gaze</title>
     @vite('resources/css/app.css')
 </head>
-<body class="min-w-[320px] min-h-screen">
+<body style="height:2500px;" class="min-w-[320px] min-h-screen">
     <x-navbar />
     {{ $slot }}
 </body>

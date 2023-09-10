@@ -11,6 +11,15 @@ export default {
 
     theme: {
         extend: {
+            animation: {
+                'intro': 'intro 0.5s ease-in-out forwards'
+            },
+            keyframes: {
+              'intro': {
+                  '0%': { transform: 'translateX(150px)' },
+                  '100%': { transform: 'translateX(0px)'}
+              }
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

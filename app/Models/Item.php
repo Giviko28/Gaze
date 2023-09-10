@@ -18,7 +18,7 @@ class Item extends Model
         $guzzle = new Client([
             'verify' => false,
             'headers' => [
-                'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+                'User-Agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
             ]
         ]);
         $response = $guzzle->get($url);
@@ -36,7 +36,7 @@ class Item extends Model
         $createdAt = Carbon::parse($this->created_at);
         $currentDateTime = Carbon::now();
 
-        if ($currentDateTime->diffInSeconds($updatedAt) > 1){
+        if ($currentDateTime->diffInSeconds($updatedAt) > 1200){
             $guzzle = new Client([
                 'verify' => false,
                 'headers' => [
